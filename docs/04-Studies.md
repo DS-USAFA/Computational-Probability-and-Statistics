@@ -171,7 +171,7 @@ a. What type of study is this?
 b. Suggest a sampling strategy for carrying out this study.  
 
 
-2. **Flawed reasoning**.  Identify the flaw in reasoning in the following scenarios. Explain what the individuals in the study should have done differently if they want to be able to make such strong conclusions.
+2. **Flawed reasoning**. Identify the flaw in reasoning in the following scenarios. Explain what the individuals in the study should have done differently if they want to be able to make such strong conclusions.
 
 a. Students at an elementary school are given a questionnaire that they are required to return after their parents have completed it. One of the questions asked is, *Do you find that your work schedule makes it difficult for you to spend time with your kids after school?* Of the parents who replied, 85% said *no*. Based on these results, the school officials conclude that a great majority of the parents have no difficulty spending time with their kids after school.  
 

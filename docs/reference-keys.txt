@@ -363,7 +363,7 @@ variance-of-sums
 independence-1
 conditional-expectation
 homework-problems-14
-TRANS
+TRANSF
 objectives-16
 transformations-1
 transformations-of-discrete-random-variables
