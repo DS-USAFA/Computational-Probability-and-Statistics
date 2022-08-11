@@ -96,7 +96,7 @@ library(usdata)
 
 
 ```{r warning=FALSE,echo=FALSE,warning=FALSE,message=FALSE}
-county_M377 <- county_complete %>% 
+county_subset <- county_complete %>% 
   select(name, state, pop2000, pop2010, fed_spend = fed_spending_2009, 
          poverty = poverty_2010, homeownership = homeownership_2010, 
          multi_unit = housing_multi_unit_2010, income = per_capita_income_2010, 
@@ -108,7 +108,7 @@ county_M377 <- county_complete %>%
 
 ```{r homeown2-fig,echo=FALSE,fig.cap="A scatterplot of the homeownership rate versus the percent of units that are in multi-unit structures for all 3,143 counties."}
 pch <- 1
-cex <- sqrt(county_M377$pop2010 / 1e6)
+cex <- sqrt(county_subset$pop2010 / 1e6)
 colPop <- fadeColor(ifelse(cex > 0.35, COL[4], COL[1]), 
                     substr(gray(0.6 + cex*0.1), 2, 3))
 colSm <- colPop
@@ -119,19 +119,19 @@ gp1 <- cex < 0.32
 colSm  <- COL[1, 3]
 colPop <- COL[1, 3]
 cexF   <- 1
-plot(county_M377$multi_unit[gp1], county_M377$homeownership[gp1], 
+plot(county_subset$multi_unit[gp1], county_subset$homeownership[gp1], 
      pch = pch, col = colSm, xlab = "", ylab = "Percent of Homeownership", 
      axes = FALSE, cex = ifelse(cex < 0.32, 0.32, cex)[gp1], 
-     xlim = range(county_M377$multi_unit), 
-     ylim = range(county_M377$homeownership))
+     xlim = range(county_subset$multi_unit), 
+     ylim = range(county_subset$homeownership))
 at = seq(0, 100, 20)
 axis(1, at, paste0(at, "%"))
 axis(2, at, paste0(at, "%"))
 box()
-points(county_M377$multi_unit[!gp1], county_M377$homeownership[!gp1], 
+points(county_subset$multi_unit[!gp1], county_subset$homeownership[!gp1], 
        pch = pch, col = colPop, xlab = "", ylab = "Percent of Homeownership", 
        cex = ifelse(cex < 0.32, 0.32, cex)[!gp1])
-points(county_M377$multi_unit[!gp1], county_M377$homeownership[!gp1], 
+points(county_subset$multi_unit[!gp1], county_subset$homeownership[!gp1], 
        pch = 20, cex = 0.2, col = COL[5, 3])
 #points(cc$housing_multi_unit, cc$home_ownership, pch = ".", cex = 1)
 #rug(county$poverty[county$fed_spend > 40], side = 3)
@@ -468,7 +468,7 @@ a. What type of study is this?
 b. Suggest a sampling strategy for carrying out this study.  
 
 
-2. **Flawed reasoning**.  Identify the flaw in reasoning in the following scenarios. Explain what the individuals in the study should have done differently if they want to be able to make such strong conclusions.
+2. **Flawed reasoning**. Identify the flaw in reasoning in the following scenarios. Explain what the individuals in the study should have done differently if they want to be able to make such strong conclusions.
 
 a. Students at an elementary school are given a questionnaire that they are required to return after their parents have completed it. One of the questions asked is, *Do you find that your work schedule makes it difficult for you to spend time with your kids after school?* Of the parents who replied, 85% said *no*. Based on these results, the school officials conclude that a great majority of the parents have no difficulty spending time with their kids after school.  
 
