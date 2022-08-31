@@ -475,7 +475,7 @@ a. Students at an elementary school are given a questionnaire that they are requ
 b. A survey is conducted on a simple random sample of 1,000 women who recently gave birth, asking them about whether or not they smoked during pregnancy. A follow-up survey asking if the children have respiratory problems is conducted 3 years later, however, only 567 of these women are reached at the same address. The researcher reports that these 567 women are representative of all mothers.  
 
 
-3. **Sampling strategies**.  A statistics student who is curious about the relationship between the amount of time students spend on social networking sites and their performance at school decides to conduct a survey. Four research strategies for collecting data are described below. In each, name the sampling method proposed and any bias you might expect.
+3. **Sampling strategies**.  A statistics student who is curious about the relationship between the amount of time students spend on social networking sites and their performance at school decides to conduct a survey. Four research strategies for collecting data are described below. In each, name the sampling method proposed and any bias you might expect. *Note: Sampling methods from both Chapter 3 (Overview of Data Collection Principles) and Chapter 4 (Studies) may be used for this problem.*
 
 a. He randomly samples 40 students from the study's population, gives them the survey, asks them to fill it out and bring it back the next day.  
 
