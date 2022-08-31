@@ -372,9 +372,9 @@ Figure 17.3: Histogram of eruption durations of Old Faithful.
 <div class="sourceCode" id="cb446"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">m</span><span class="op">&lt;-</span><span class="fu">mean</span><span class="op">(</span><span class="va">faithful</span><span class="op">$</span><span class="va">eruptions</span><span class="op">)</span></span>
 <span><span class="va">s</span><span class="op">&lt;-</span><span class="fu"><a href="https://www.mosaic-web.org/mosaic/reference/aggregating.html">sd</a></span><span class="op">(</span><span class="va">faithful</span><span class="op">$</span><span class="va">eruptions</span><span class="op">)</span></span></code></pre></div>
-<p>Use the function <code><a href="http://rpruim.github.io/fastR2/reference/nlmax.html">nlmax()</a></code> to maximize the non-linear log-likelihood function.</p>
+<p>Use the function <code><a href="https://rdrr.io/pkg/fastR2/man/nlmax.html">nlmax()</a></code> to maximize the non-linear log-likelihood function.</p>
 <div class="sourceCode" id="cb447"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">mle</span><span class="op">&lt;-</span><span class="fu"><a href="http://rpruim.github.io/fastR2/reference/nlmax.html">nlmax</a></span><span class="op">(</span><span class="va">loglik</span>,p<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0.5</span>,<span class="va">m</span><span class="op">-</span><span class="fl">1</span>,<span class="va">m</span><span class="op">+</span><span class="fl">1</span>,<span class="va">s</span>,<span class="va">s</span><span class="op">)</span>,x<span class="op">=</span><span class="va">faithful</span><span class="op">$</span><span class="va">eruptions</span><span class="op">)</span><span class="op">$</span><span class="va">estimate</span></span>
+<code class="sourceCode R"><span><span class="va">mle</span><span class="op">&lt;-</span><span class="fu"><a href="https://rdrr.io/pkg/fastR2/man/nlmax.html">nlmax</a></span><span class="op">(</span><span class="va">loglik</span>,p<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0.5</span>,<span class="va">m</span><span class="op">-</span><span class="fl">1</span>,<span class="va">m</span><span class="op">+</span><span class="fl">1</span>,<span class="va">s</span>,<span class="va">s</span><span class="op">)</span>,x<span class="op">=</span><span class="va">faithful</span><span class="op">$</span><span class="va">eruptions</span><span class="op">)</span><span class="op">$</span><span class="va">estimate</span></span>
 <span><span class="va">mle</span></span></code></pre></div>
 <pre><code>## [1] 0.3484040 2.0186065 4.2733410 0.2356208 0.4370633</code></pre>
 <p>So, according to our MLEs, about 34.84% of the eruptions belong to the first normal distribution (the one on the left). Furthermore the parameters of that first distribution are a mean of 2.019 and a standard deviation of 0.236. Likewise, 65.16% of the eruptions belong to the second normal with mean of 4.27 and standard deviation of 0.437.</p>
@@ -467,7 +467,7 @@ Figure 17.4: Histogram of eruption duration with estimated mixture of normals pl
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Computational Probability and Statistics</strong>" was written by Matthew Davis, Brianna Hitt, Ken Horton, Kris Pruitt, Bradley Warner. It was last built on 2022-08-11.</p>
+    <p>"<strong>Computational Probability and Statistics</strong>" was written by Matthew Davis, Brianna Hitt, Ken Horton, Kris Pruitt, Bradley Warner. It was last built on 2022-08-30.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
