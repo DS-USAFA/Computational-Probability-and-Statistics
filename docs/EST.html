@@ -143,11 +143,11 @@
 <p>We started this book with descriptive models of data and then moved onto probability models. In these probability models, we have been characterizing experiments and random processes using both theory and simulation. These models are using a model about a random event to make decisions about data. These models are about the population and are used to make decisions about samples and data. For example, suppose we flip a fair coin 10 times, and record the number of heads. The population is the collection of all possible outcomes of this experiment. In this case, the population is infinite, as we could run this experiment repeatedly without limit. If we assume, model, the number of heads as a binomial distribution, we know the exact distribution of the outcomes. For example, we know that exactly 24.61% of the time, we will obtain 5 heads out of 10 flips of a fair coin. We can also use the model to characterize the variance, that is when it does not equal 5 and how much different from 5 it will be. However, these probability models are highly dependent on the assumptions and the values of the parameters.</p>
 <p>From this point on in the book, we will focus on <em>statistical</em> models. Statistical models describe one or more variables and their relationships. We use these models to make decisions about the population, to predict future outcomes, or both. Often we don’t know the true underlying process; all we have is a <em>sample</em> of observations and perhaps some context. Using <em>inferential</em> statistics, we can draw conclusions about the underlying process. For example, suppose we are given a coin and we don’t know whether it is fair. So, we flip it a number of times to obtain a sample of outcomes. We can use that sample to decide whether the coin could be fair.</p>
 <p>In some sense, we’ve already explored some of these concepts. In our simulation examples, we have drawn observations from a population of interest and used those observations to estimate characteristics of another population or segment of the experiment. For example, we explored random variable <span class="math inline">\(Z\)</span>, where <span class="math inline">\(Z=|X - Y|\)</span> and <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> were both uniform random variables. Instead of dealing with the distribution of <span class="math inline">\(Z\)</span> directly, we simulated many observations from <span class="math inline">\(Z\)</span> and used this simulation to describe the behavior of <span class="math inline">\(Z\)</span>.</p>
-<p>Statistical models and probability models are not separate. In statistical models we find relationships, the explained portion of variation, and use probability models for the remaining random variation. In Figure <a href="EST.html#fig:prob-stats">17.1</a>, we demonstrate this relationship between the two types of models. In the first part of our studies, we will use univariate data in statistical models to estimate the parameters of a probability model. From there we will develop more sophisticated models to include multivariate models.</p>
+<p>Statistical models and probability models are not separate. In statistical models we find relationships, the explained portion of variation, and use probability models for the remaining random variation. In Figure <a href="PROBRULES.html#fig:prob-stats">8.1</a>, we demonstrate this relationship between the two types of models. In the first part of our studies, we will use univariate data in statistical models to estimate the parameters of a probability model. From there we will develop more sophisticated models to include multivariate models.</p>
 <div class="figure" style="text-align: center">
 <span style="display:block;" id="fig:prob-stats"></span>
 <img src="figures/Prob_Stats.png" alt="A graphical representation of probability and statistics. In probability, we describe what we expect to happen if we know that underlying process; in statistics, we don't know the underlying process, and must infer based on representative samples." width="576"><p class="caption">
-Figure 17.1: A graphical representation of probability and statistics. In probability, we describe what we expect to happen if we know that underlying process; in statistics, we don’t know the underlying process, and must infer based on representative samples.
+Figure 8.1: A graphical representation of probability and statistics. In probability, we describe what we expect to happen if we know that underlying process; in statistics, we don’t know the underlying process, and must infer based on representative samples.
 </p>
 </div>
 </div>
@@ -283,15 +283,15 @@ Continuing our example. Find the maximum likelihood estimator for <span class="m
 <span class="math display">\[
 L(\pi;\boldsymbol{x})= \pi^{\sum x_i}(1-\pi)^{n-\sum x_i}
 \]</span></p>
-<p>Figure <a href="EST.html#fig:lik1-fig">17.2</a> is a plot of the likelihood function as a function of the unknown parameter <span class="math inline">\(\pi\)</span>.</p>
+<p>Figure <a href="EST.html#fig:lik1-fig">17.1</a> is a plot of the likelihood function as a function of the unknown parameter <span class="math inline">\(\pi\)</span>.</p>
 <pre><code>## Warning: geom_vline(): Ignoring `mapping` because `xintercept` was provided.</code></pre>
 <div class="figure">
 <span style="display:block;" id="fig:lik1-fig"></span>
 <img src="17-Estimation-Methods_files/figure-html/lik1-fig-1.png" alt="Likelihood function for 18 successes in 50 trials" width="672"><p class="caption">
-Figure 17.2: Likelihood function for 18 successes in 50 trials
+Figure 17.1: Likelihood function for 18 successes in 50 trials
 </p>
 </div>
-<p>By visual inspection, the value of <span class="math inline">\(\pi\)</span> that makes our data most likely, maximizes the likelihood function, is something a little less than 0.4, the actual value is 0.36 as indicated by the blue line in Figure <a href="EST.html#fig:lik1-fig">17.2</a>.</p>
+<p>By visual inspection, the value of <span class="math inline">\(\pi\)</span> that makes our data most likely, maximizes the likelihood function, is something a little less than 0.4, the actual value is 0.36 as indicated by the blue line in Figure <a href="EST.html#fig:lik1-fig">17.1</a>.</p>
 <p>To maximize by mathematical methods, we need to take the derivative of the likelihood function with respect to <span class="math inline">\(\pi\)</span>. We can do this because the likelihood function is a continuous function. Even though the binomial is a discrete random variable, its likelihood is a continuous function.</p>
 <p>We can find the derivative of the likelihood function by applying the product rule:
 <span class="math display">\[
@@ -328,11 +328,11 @@ l(\pi;\boldsymbol{x})=\log L(\pi;\boldsymbol{x})= \log \left(\pi^{\sum x_i}(1-\p
 <p>When obtaining MLEs, there are times when analytical methods (calculus) are not feasible or not possible. In the Pruim book <span class="citation">(<a href="references.html#ref-pruim2011foundations" role="doc-biblioref">R. J. Pruim 2011</a>)</span>, there is a good example regarding data from Old Faithful at Yellowstone National Park. We need to load the <strong>fastR2</strong> package for this example.</p>
 <div class="sourceCode" id="cb443"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/rpruim/fastR2">fastR2</a></span><span class="op">)</span></span></code></pre></div>
-<p>The <code>faithful</code> data set is preloaded into <code>R</code> and contains 272 observations of 2 variables: eruption time in minutes and waiting time until next eruption. If we plot eruption durations, we notice that the distribution appears bimodal, see Figure <a href="EST.html#fig:hist171-fig">17.3</a>.</p>
+<p>The <code>faithful</code> data set is preloaded into <code>R</code> and contains 272 observations of 2 variables: eruption time in minutes and waiting time until next eruption. If we plot eruption durations, we notice that the distribution appears bimodal, see Figure <a href="EST.html#fig:hist171-fig">17.2</a>.</p>
 <div class="figure">
 <span style="display:block;" id="fig:hist171-fig"></span>
 <img src="17-Estimation-Methods_files/figure-html/hist171-fig-1.png" alt="Histogram of eruption durations of Old Faithful." width="672"><p class="caption">
-Figure 17.3: Histogram of eruption durations of Old Faithful.
+Figure 17.2: Histogram of eruption durations of Old Faithful.
 </p>
 </div>
 <p>Within each section, the distribution appears somewhat bell-curve-ish so we’ll model the eruption time with a mixture of two normal distributions. In this mixture, a proportion <span class="math inline">\(\alpha\)</span> of our eruptions belong to one normal distribution and the remaining <span class="math inline">\(1-\alpha\)</span> belong to the other normal distribution. The density function of eruptions is given by:
@@ -372,9 +372,9 @@ Figure 17.3: Histogram of eruption durations of Old Faithful.
 <div class="sourceCode" id="cb446"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">m</span><span class="op">&lt;-</span><span class="fu">mean</span><span class="op">(</span><span class="va">faithful</span><span class="op">$</span><span class="va">eruptions</span><span class="op">)</span></span>
 <span><span class="va">s</span><span class="op">&lt;-</span><span class="fu"><a href="https://www.mosaic-web.org/mosaic/reference/aggregating.html">sd</a></span><span class="op">(</span><span class="va">faithful</span><span class="op">$</span><span class="va">eruptions</span><span class="op">)</span></span></code></pre></div>
-<p>Use the function <code><a href="https://rdrr.io/pkg/fastR2/man/nlmax.html">nlmax()</a></code> to maximize the non-linear log-likelihood function.</p>
+<p>Use the function <code><a href="http://rpruim.github.io/fastR2/reference/nlmax.html">nlmax()</a></code> to maximize the non-linear log-likelihood function.</p>
 <div class="sourceCode" id="cb447"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">mle</span><span class="op">&lt;-</span><span class="fu"><a href="https://rdrr.io/pkg/fastR2/man/nlmax.html">nlmax</a></span><span class="op">(</span><span class="va">loglik</span>,p<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0.5</span>,<span class="va">m</span><span class="op">-</span><span class="fl">1</span>,<span class="va">m</span><span class="op">+</span><span class="fl">1</span>,<span class="va">s</span>,<span class="va">s</span><span class="op">)</span>,x<span class="op">=</span><span class="va">faithful</span><span class="op">$</span><span class="va">eruptions</span><span class="op">)</span><span class="op">$</span><span class="va">estimate</span></span>
+<code class="sourceCode R"><span><span class="va">mle</span><span class="op">&lt;-</span><span class="fu"><a href="http://rpruim.github.io/fastR2/reference/nlmax.html">nlmax</a></span><span class="op">(</span><span class="va">loglik</span>,p<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0.5</span>,<span class="va">m</span><span class="op">-</span><span class="fl">1</span>,<span class="va">m</span><span class="op">+</span><span class="fl">1</span>,<span class="va">s</span>,<span class="va">s</span><span class="op">)</span>,x<span class="op">=</span><span class="va">faithful</span><span class="op">$</span><span class="va">eruptions</span><span class="op">)</span><span class="op">$</span><span class="va">estimate</span></span>
 <span><span class="va">mle</span></span></code></pre></div>
 <pre><code>## [1] 0.3484040 2.0186065 4.2733410 0.2356208 0.4370633</code></pre>
 <p>So, according to our MLEs, about 34.84% of the eruptions belong to the first normal distribution (the one on the left). Furthermore the parameters of that first distribution are a mean of 2.019 and a standard deviation of 0.236. Likewise, 65.16% of the eruptions belong to the second normal with mean of 4.27 and standard deviation of 0.437.</p>
@@ -394,7 +394,7 @@ Figure 17.3: Histogram of eruption durations of Old Faithful.
 <div class="figure">
 <span style="display:block;" id="fig:hist172-fig"></span>
 <img src="17-Estimation-Methods_files/figure-html/hist172-fig-1.png" alt="Histogram of eruption duration with estimated mixture of normals plotted on top." width="672"><p class="caption">
-Figure 17.4: Histogram of eruption duration with estimated mixture of normals plotted on top.
+Figure 17.3: Histogram of eruption duration with estimated mixture of normals plotted on top.
 </p>
 </div>
 <p>This is a fairly elaborate example but it is cool. You can see the power of the method and the software.</p>
@@ -467,7 +467,7 @@ Figure 17.4: Histogram of eruption duration with estimated mixture of normals pl
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Computational Probability and Statistics</strong>" was written by Matthew Davis, Brianna Hitt, Ken Horton, Kris Pruitt, Bradley Warner. It was last built on 2022-08-30.</p>
+    <p>"<strong>Computational Probability and Statistics</strong>" was written by Matthew Davis, Brianna Hitt, Ken Horton, Kris Pruitt, Bradley Warner. It was last built on 2022-09-25.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
