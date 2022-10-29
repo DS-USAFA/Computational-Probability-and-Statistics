@@ -347,7 +347,7 @@ f. Use the function `stripplot()` to visualize the arrival of 30 vehicles using 
 
 a. Find the probability that 20 hours pass without a computer error.  
 b. Find the probability that 45 hours pass without a computer error, given that 25 hours have already passed. Does the memory-less property apply to the Gamma distribution?   
-c. Find $a$ and $b$: There is a 95% probability time until next computer error will be between $a$ and $b$. (note: technically, there are many answers to this question, but find $a$ and $b$ such that each tail has equal probability.) 
+c. Find $a$ and $b$ where there is a 95% probability time until next computer error will be between $a$ and $b$. (note: technically, there are many answers to this question, but find $a$ and $b$ such that each tail has equal probability.) 
 
 
 \pagebreak
