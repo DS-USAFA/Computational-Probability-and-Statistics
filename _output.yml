@@ -1,6 +1,5 @@
 bookdown::gitbook:
   css: style.css
-  code_folding: show
   config:
     toc:
       collapse: section
@@ -14,7 +13,6 @@ bookdown::gitbook:
     download: no
 bookdown::bs4_book:
   css: style.css
-  code_folding: show
   theme:
     primary: "#00308f"
   config:

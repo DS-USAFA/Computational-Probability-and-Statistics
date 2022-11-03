@@ -114,7 +114,7 @@
 </ul>
 
         <div class="book-extra">
-          <p><a id="book-repo" href="https://github.com/DS-USAFA/Probability-and-Statistics-MASTER">View book source <i class="fab fa-github"></i></a></p>
+          <p><a id="book-repo" href="https://github.com/DS-USAFA/Computational-Probability-and-Statistics">View book source <i class="fab fa-github"></i></a></p>
         </div>
       </nav>
 </div>
@@ -187,7 +187,7 @@ To simulate rolling a die 4 times, we use <code><a href="https://www.mosaic-web.
 <pre><code>## [1] 4 2 2 1</code></pre>
 <p>Let’s roll it 10,000 times and find</p>
 <div class="sourceCode" id="cb289"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">results</span><span class="op">&lt;-</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/do.html">do</a></span><span class="op">(</span><span class="fl">10000</span><span class="op">)</span><span class="op">*</span><span class="fu"><a href="https://www.mosaic-web.org/mosaic/reference/resample.html">sample</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">6</span>,<span class="fl">1</span>,replace<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">results</span><span class="op">&lt;-</span><span class="fu">do</span><span class="op">(</span><span class="fl">10000</span><span class="op">)</span><span class="op">*</span><span class="fu"><a href="https://www.mosaic-web.org/mosaic/reference/resample.html">sample</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">6</span>,<span class="fl">1</span>,replace<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
 <div class="sourceCode" id="cb290"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/mosaicCore/man/tally.html">tally</a></span><span class="op">(</span><span class="op">~</span><span class="va">sample</span>,data<span class="op">=</span><span class="va">results</span>,format<span class="op">=</span><span class="st">"percent"</span><span class="op">)</span></span></code></pre></div>
 <pre><code>## sample
@@ -212,7 +212,7 @@ To simulate rolling a die 4 times, we use <code><a href="https://www.mosaic-web.
 f_X(x)=\mbox{P}(X=x)={n\choose{x}}p^x(1-p)^{n-x}
 \]</span></p>
 <p>for <span class="math inline">\(x \in \{0,1,...,n\}\)</span> and 0 otherwise.</p>
-<p>Let’s take a moment to dissect this pmf. We are looking for the probability of obtaining <span class="math inline">\(x\)</span> successes out of <span class="math inline">\(n\)</span> trials. The <span class="math inline">\(p^x\)</span> represents the probability of <span class="math inline">\(x\)</span> successes, using the multiplication rule because of the independence assumption. The term <span class="math inline">\((1-p)^{n-x}\)</span> represents the probability of the remainder of the trials as failures. Finally, the <span class="math inline">\(n\choose x\)</span> term represents the number of ways to obtain <span class="math inline">\(x\)</span> successes out of <span class="math inline">\(n\)</span> trials. For example, there are three ways to obtain 1 success out of 3 trials (one success followed by two failures; one success, one failure then one success; or two failures followed by a success).</p>
+<p>Let’s take a moment to dissect this pmf. We are looking for the probability of obtaining <span class="math inline">\(x\)</span> successes out of <span class="math inline">\(n\)</span> trials. The <span class="math inline">\(p^x\)</span> represents the probability of <span class="math inline">\(x\)</span> successes, using the multiplication rule because of the independence assumption. The term <span class="math inline">\((1-p)^{n-x}\)</span> represents the probability of the remainder of the trials as failures. Finally, the <span class="math inline">\(n\choose x\)</span> term represents the number of ways to obtain <span class="math inline">\(x\)</span> successes out of <span class="math inline">\(n\)</span> trials. For example, there are three ways to obtain 1 success out of 3 trials (one success followed by two failures; one failure, one success and then one failure; or two failures followed by a success).</p>
 <p>The expected value of a binomially distributed random variable is given by <span class="math inline">\(\mbox{E}(X)=np\)</span> and the variance is given by <span class="math inline">\(\mbox{Var}(X)=np(1-p)\)</span>.</p>
 <blockquote>
 <p><em>Example</em>:<br>
@@ -515,8 +515,8 @@ Figure 12.5: The pmf for binomail in Homework Problem 1a.
 
       <div class="book-extra">
         <ul class="list-unstyled">
-<li><a id="book-source" href="https://github.com/DS-USAFA/Probability-and-Statistics-MASTER/blob/master/12-Named-Discrete-Distributions.Rmd">View source <i class="fab fa-github"></i></a></li>
-          <li><a id="book-edit" href="https://github.com/DS-USAFA/Probability-and-Statistics-MASTER/edit/master/12-Named-Discrete-Distributions.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+<li><a id="book-source" href="https://github.com/DS-USAFA/Computational-Probability-and-Statistics/blob/master/12-Named-Discrete-Distributions.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/DS-USAFA/Computational-Probability-and-Statistics/edit/master/12-Named-Discrete-Distributions.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
         </ul>
 </div>
     </nav>
@@ -528,7 +528,7 @@ Figure 12.5: The pmf for binomail in Homework Problem 1a.
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Computational Probability and Statistics</strong>" was written by Matthew Davis, Brianna Hitt, Ken Horton, Kris Pruitt, Bradley Warner. It was last built on 2022-09-25.</p>
+    <p>"<strong>Computational Probability and Statistics</strong>" was written by Matthew Davis, Brianna Hitt, Ken Horton, Kris Pruitt, Bradley Warner. It was last built on 2022-11-03.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
