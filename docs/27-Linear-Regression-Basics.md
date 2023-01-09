@@ -6,7 +6,7 @@
 
 2) Interpret the coefficients of a simple linear regression.  
 
-3) Create a scatterplot with a regression line.  
+3) Create a scatterplot with a regression line in R.  
 
 4) Explain and check the assumptions of linear regression.   
 
@@ -17,7 +17,7 @@
 
 The rest of this block will serve as a brief introduction to linear models. In general, a model estimates the relationship between one variable (a **response**) and one or more other variables (**predictors**). Models typically serve two purposes: *prediction* and *inference*. A model allows us to predict the value of a response given particular values of predictors. Also, a model allows us to make inferences about the relationship between the response and the predictors. 
 
-Not all models are used or built on the same principles. Some models are better for inference and others are better for prediction. Some models are better for qualitative responses and others are better for quantitative responses. Also, many models require making assumptions about the nature of the relationship between variables. If these assumptions are violated, the model loses usefulness. In a machine learning course, a wide array of models are discussed but most of which are used for the purpose of prediction. 
+Not all models are used or built on the same principles. Some models are better for inference and others are better for prediction. Some models are better for qualitative responses and others are better for quantitative responses. Also, many models require making assumptions about the nature of the relationship between variables. If these assumptions are violated, the model loses usefulness. In a machine learning course, a wide array of models are discussed but most are used for the purpose of prediction. 
 
 In this block, we will focus on *linear models* and the use of linear regression to produce and evaluate the model. Linear regression is a very powerful statistical technique. Many people have some familiarity with regression just from reading the news, where graphs with straight lines are overlaid on scatterplots, much like we did in the last chapter. Linear models can be used for prediction or to evaluate whether there is a linear relationship between two numerical variables.  
 
@@ -39,7 +39,7 @@ $$
 Y=\beta_0+\beta_1 X^2
 $$
 
-Technically, we can write the parameters as a vector and the explanatory variables as a matrix. The response will then be an inner product of this vector and matrix and thus a linear combination.
+Technically, we can write the parameters as a vector and the predictor or explanatory variables as a matrix. The response will then be an inner product of this vector and matrix and thus a linear combination.
 
 Even if we expect two random variables $X$ and $Y$ to share a linear relationship, we don't expect it to be perfect. There will be some scatter around the estimated line. For example, consider the head length and total length of 104 brushtail possums from Australia. The data is in the file `possum.csv` in the `data` folder. 
 
@@ -135,7 +135,7 @@ $$
 
 We could fit the linear relationship by eye like we did in the case study and obtain estimates of the slope and intercept but this is too ad hoc.^[If you want to do try this again use the `plot_ss()` from the last chapter.]  So, given a set of data like the `possum`, how do we actually obtain estimates of $\beta_0$ and $\beta_1$? What is the **best** fit line?  
 
-We begin by thinking about what we mean by ``best''. Mathematically, we want a line that has small residuals. There are multiple methods, but the most common is the *method of least squares*. In this method, our goal is to find the values of $\beta_0$ and $\beta_1$ that minimize the squared vertical distance between the points and the resulting line, the **residuals**. See \@ref(fig:resid1-fig) for a visual representation involving only four observations from *made up* data. 
+We begin by thinking about what we mean by "best". Mathematically, we want a line that has small residuals. There are multiple methods, but the most common is the *method of least squares*. In this method, our goal is to find the values of $\beta_0$ and $\beta_1$ that minimize the squared vertical distance between the points and the resulting line, the **residuals**. See \@ref(fig:resid1-fig) for a visual representation involving only four observations from *made up* data. 
 
 <div class="figure">
 <img src="27-Linear-Regression-Basics_files/figure-html/resid1-fig-1.png" alt="An illustration of the least squares method." width="672" />
@@ -246,7 +246,7 @@ summary(poss_mod)
 ```
 
 
-The model object, `poss_mod`, contains much more information. Using the function `names()` function on the model objects, gives you a list of other quantities available, such as residuals.
+The model object, `poss_mod`, contains much more information. Using the `names()` function on the model objects, gives you a list of other quantities available, such as residuals.
 
 
 ```r
