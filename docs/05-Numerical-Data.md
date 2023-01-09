@@ -535,3 +535,4 @@ d. Create the new scatterplot suggested in part c).
 e. Are life span and length of gestation independent? Explain your reasoning.
 
 
+## [Solutions Manual](https://ds-usafa.github.io/CPS-Solutions-Manual/NUMDATA.html) {-}
