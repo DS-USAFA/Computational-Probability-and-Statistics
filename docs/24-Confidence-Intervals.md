@@ -679,3 +679,5 @@ c. Use `prop.test()` with `correct = TRUE` to conduct the hypothesis test and fi
 
 d. Which test should you use?  
  
+
+## [Solutions Manual](https://ds-usafa.github.io/CPS-Solutions-Manual/CI.html) {-}

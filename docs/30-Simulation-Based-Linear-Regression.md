@@ -881,3 +881,7 @@ b. Build a linear model fitting interest rate against term. Does there appear to
 c. Write out the estimated linear model. In words, interpret the coefficient estimate.     
 d. Construct a bootstrap confidence interval on the coefficient.  
 e. Check model assumptions.  
+
+
+
+## [Solutions Manual](https://ds-usafa.github.io/CPS-Solutions-Manual/LRSIM.html) {-}

@@ -557,3 +557,4 @@ e. Calculate a $p$-value.
 f. Draw a conclusion.  
 
 
+## [Solutions Manual](https://ds-usafa.github.io/CPS-Solutions-Manual/HYPTESTCLT.html) {-}

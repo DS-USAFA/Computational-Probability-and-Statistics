@@ -390,3 +390,6 @@ $$
   
   h. Decide if the treatment is effective.  
   
+
+## [Solutions Manual](https://ds-usafa.github.io/CPS-Solutions-Manual/CS3.html) {-}
+
