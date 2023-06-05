@@ -514,7 +514,7 @@ Births %>%
 ```
 
 ```
-## # A tibble: 20 x 2
+## # A tibble: 20 × 2
 ##     year     n
 ##    <int> <int>
 ##  1  1969   365
@@ -550,7 +550,7 @@ Births %>%
 ```
 
 ```
-## # A tibble: 15 x 2
+## # A tibble: 15 × 2
 ##     year     n
 ##    <int> <int>
 ##  1  1969   365
@@ -590,7 +590,7 @@ head(birth_data)
 ```
 
 ```
-## # A tibble: 6 x 2
+## # A tibble: 6 × 2
 ##   day_of_year      n
 ##         <int>  <int>
 ## 1           1 120635
@@ -667,3 +667,5 @@ b. Generalize your solution to any number `n` people in the room and create a fu
 c. Vectorize the function.  
 d. Plot the probability of exactly 2 people having the same birthday versus number of people in the room.  
 e. Comment on the shape of the curve and explain it.  
+
+## [Solutions Manual](https://ds-usafa.github.io/CPS-Solutions-Manual/CS2.html)

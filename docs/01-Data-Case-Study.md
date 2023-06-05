@@ -136,7 +136,7 @@ head(stent_study, n = 10)
 ```
 
 ```
-## # A tibble: 10 x 3
+## # A tibble: 10 × 3
 ##    group   outcome30 outcome365
 ##    <chr>   <chr>     <chr>     
 ##  1 control no_event  no_event  

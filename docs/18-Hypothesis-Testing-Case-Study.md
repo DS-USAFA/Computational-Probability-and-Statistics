@@ -139,7 +139,7 @@ head(discrim)
 ```
 
 ```
-## # A tibble: 6 x 2
+## # A tibble: 6 × 2
 ##   gender decision    
 ##   <fct>  <fct>       
 ## 1 female not_promoted

@@ -137,7 +137,7 @@ head(heights)
 ```
 
 ```
-## # A tibble: 6 x 1
+## # A tibble: 6 × 1
 ##   height
 ##    <dbl>
 ## 1   62  
@@ -157,7 +157,17 @@ heights %>%
 ```
 
 ```
-## # A tibble: 2 x 4
+## Warning: Returning more (or less) than 1 row per `summarise()` group was deprecated in
+## dplyr 1.1.0.
+## ℹ Please use `reframe()` instead.
+## ℹ When switching from `summarise()` to `reframe()`, remember that `reframe()`
+##   always returns an ungrouped data frame and adjust accordingly.
+## Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
+## generated.
+```
+
+```
+## # A tibble: 2 × 4
 ##    mean stand_dev     n    ci
 ##   <dbl>     <dbl> <int> <dbl>
 ## 1  68.9      6.35    50  67.1
@@ -174,7 +184,17 @@ heights %>%
 ```
 
 ```
-## # A tibble: 2 x 4
+## Warning: Returning more (or less) than 1 row per `summarise()` group was deprecated in
+## dplyr 1.1.0.
+## ℹ Please use `reframe()` instead.
+## ℹ When switching from `summarise()` to `reframe()`, remember that `reframe()`
+##   always returns an ungrouped data frame and adjust accordingly.
+## Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
+## generated.
+```
+
+```
+## # A tibble: 2 × 4
 ##    mean stand_dev     n    ci
 ##   <dbl>     <dbl> <int> <dbl>
 ## 1  68.9      6.35    50  67.2
@@ -317,6 +337,16 @@ boot_results %>%
   mutate(stat = mean) %>%
   summarise(mean = mean(stat), stand_dev = sd(stat), 
             ci = mean + c(-1,1)*qt(0.975, 49)*stand_dev)
+```
+
+```
+## Warning: Returning more (or less) than 1 row per `summarise()` group was deprecated in
+## dplyr 1.1.0.
+## ℹ Please use `reframe()` instead.
+## ℹ When switching from `summarise()` to `reframe()`, remember that `reframe()`
+##   always returns an ungrouped data frame and adjust accordingly.
+## Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
+## generated.
 ```
 
 ```
@@ -629,6 +659,19 @@ HELP_sub %>%
   gf_qq(~age|sex) %>%
   gf_qqline(~age|sex) %>%
   gf_theme(theme_bw())
+```
+
+```
+## Warning: The following aesthetics were dropped during statistical transformation: sample
+## ℹ This can happen when ggplot fails to infer the correct grouping structure in
+##   the data.
+## ℹ Did you forget to specify a `group` aesthetic or to convert a numerical
+##   variable into a factor?
+## The following aesthetics were dropped during statistical transformation: sample
+## ℹ This can happen when ggplot fails to infer the correct grouping structure in
+##   the data.
+## ℹ Did you forget to specify a `group` aesthetic or to convert a numerical
+##   variable into a factor?
 ```
 
 <div class="figure">

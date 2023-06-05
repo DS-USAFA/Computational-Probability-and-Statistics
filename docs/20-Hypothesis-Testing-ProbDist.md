@@ -205,7 +205,7 @@ head(thinner)
 ```
 
 ```
-## # A tibble: 6 x 2
+## # A tibble: 6 × 2
 ##   group     outcome 
 ##   <chr>     <chr>   
 ## 1 treatment survived

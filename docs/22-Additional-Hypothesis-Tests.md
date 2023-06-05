@@ -570,6 +570,14 @@ mlb_obp_subset %>%
   gf_theme(theme_classic())
 ```
 
+```
+## Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+## ℹ Please use `linewidth` instead.
+## This warning is displayed once every 8 hours.
+## Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
+## generated.
+```
+
 <div class="figure">
 <img src="22-Additional-Hypothesis-Tests_files/figure-html/dens226-fig-1.png" alt="Density curves of on-base percentage by position played." width="672" />
 <p class="caption">(\#fig:dens226-fig)Density curves of on-base percentage by position played.</p>
@@ -580,6 +588,19 @@ mlb_obp_subset %>%
 mlb_obp_subset %>%
   gf_qq(~obp | position) %>%
   gf_qqline()
+```
+
+```
+## Warning: The following aesthetics were dropped during statistical transformation: sample
+## ℹ This can happen when ggplot fails to infer the correct grouping structure in
+##   the data.
+## ℹ Did you forget to specify a `group` aesthetic or to convert a numerical
+##   variable into a factor?
+## The following aesthetics were dropped during statistical transformation: sample
+## ℹ This can happen when ggplot fails to infer the correct grouping structure in
+##   the data.
+## ℹ Did you forget to specify a `group` aesthetic or to convert a numerical
+##   variable into a factor?
 ```
 
 <div class="figure">
@@ -718,10 +739,6 @@ results %>%
           x = "Test statistic")
 ```
 
-```
-## Warning: geom_vline(): Ignoring `mapping` because `xintercept` was provided.
-```
-
 <div class="figure">
 <img src="22-Additional-Hypothesis-Tests_files/figure-html/hist228-fig-1.png" alt="The sampling distribution of the randomization test using the difference of means." width="672" />
 <p class="caption">(\#fig:hist228-fig)The sampling distribution of the randomization test using the difference of means.</p>
@@ -779,10 +796,6 @@ results %>%
   gf_labs(title = "Randomization test sampling distribution", 
           subtitle = "t-statistic", 
           x = "Test statistic")
-```
-
-```
-## Warning: geom_vline(): Ignoring `mapping` because `xintercept` was provided.
 ```
 
 <div class="figure">

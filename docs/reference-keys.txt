@@ -263,6 +263,7 @@ mathematical-solution
 general-solution
 data-science-approach
 homework-problems-6
+solutions-manual-6
 PROBRULES
 objectives-8
 probability-vs-statistics
@@ -279,6 +280,7 @@ multiplication-rule-1-order-matters-sample-with-replacement
 multiplication-rule-2-permutation-order-matters-sampling-without-replacement
 multiplication-rule-3-combination-order-does-not-matter-sampling-without-replacement
 homework-problems-7
+solutions-manual-7
 CONDPROB
 objectives-9
 conditional-probability-1
@@ -288,6 +290,7 @@ approach-using-whole-numbers
 mathematical-approach
 simulation
 homework-problems-8
+solutions-manual-8
 RANDVAR
 objectives-10
 random-variables-1
@@ -303,6 +306,7 @@ mean
 variance
 mean-and-variance-of-linear-transformations
 homework-problems-9
+solutions-manual-9
 CONRANDVAR
 objectives-11
 continuous-random-variables-1

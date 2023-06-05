@@ -252,7 +252,7 @@ slope_estimate
 ```
 ## Response: calories (numeric)
 ## Explanatory: carb (numeric)
-## # A tibble: 1 x 1
+## # A tibble: 1 × 1
 ##    stat
 ##   <dbl>
 ## 1  4.30
@@ -272,7 +272,7 @@ head(results2)
 ```
 ## Response: calories (numeric)
 ## Explanatory: carb (numeric)
-## # A tibble: 6 x 2
+## # A tibble: 6 × 2
 ##   replicate  stat
 ##       <int> <dbl>
 ## 1         1  3.75
@@ -293,7 +293,7 @@ slope_ci
 ```
 
 ```
-## # A tibble: 1 x 2
+## # A tibble: 1 × 2
 ##   lower_ci upper_ci
 ##      <dbl>    <dbl>
 ## 1     3.14     5.26
@@ -310,6 +310,14 @@ results2 %>%
   geom_vline(xintercept = slope_estimate$stat,color="black",size=2) +
   labs(x="Estimated Slope") +
   theme_bw()
+```
+
+```
+## Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+## ℹ Please use `linewidth` instead.
+## This warning is displayed once every 8 hours.
+## Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
+## generated.
 ```
 
 <div class="figure">
@@ -564,7 +572,7 @@ str(loans100)
 ```
 
 ```
-## tibble [98 x 2] (S3: tbl_df/tbl/data.frame)
+## tibble [98 × 2] (S3: tbl_df/tbl/data.frame)
 ##  $ interest_rate: num [1:98] 19.03 9.44 6.07 7.96 10.9 ...
 ##  $ homeownership: Factor w/ 3 levels "MORTGAGE","OWN",..: 1 1 1 1 1 1 1 1 1 1 ...
 ```
@@ -611,7 +619,7 @@ loans100 %>%
 ```
 
 ```
-## # A tibble: 1 x 1
+## # A tibble: 1 × 1
 ##   average
 ##     <dbl>
 ## 1    10.5
@@ -627,7 +635,7 @@ loans100 %>%
 ```
 
 ```
-## # A tibble: 3 x 3
+## # A tibble: 3 × 3
 ##   homeownership average std_dev
 ##   <fct>           <dbl>   <dbl>
 ## 1 MORTGAGE         10.5    3.44
@@ -709,10 +717,6 @@ results %>%
   gf_vline(xintercept = obs$homeownershipOWN,color="red") %>%
   gf_theme(theme_classic()) %>%
   gf_labs(y="",x="Homeownership (Own).")
-```
-
-```
-## Warning: geom_vline(): Ignoring `mapping` because `xintercept` was provided.
 ```
 
 <div class="figure">

@@ -32,22 +32,20 @@ head(mariokart, n = 10)
 ```
 
 ```
-## # A tibble: 10 x 12
-##    id       durat~1 n_bids cond  start~2 ship_pr total~3 ship_sp selle~4 stock~5
-##    <chr>      <dbl>  <dbl> <chr>   <dbl>   <dbl>   <dbl> <chr>     <dbl> <chr>  
-##  1 1503774~       3     20 new      0.99    4       51.6 standa~    1580 yes    
-##  2 2604833~       7     13 used     0.99    3.99    37.0 firstC~     365 yes    
-##  3 3204323~       3     16 new      0.99    3.5     45.5 firstC~     998 no     
-##  4 2804052~       3     18 new      0.99    0       44   standa~       7 yes    
-##  5 1703922~       1     20 new      0.01    0       71   media       820 yes    
-##  6 3601951~       3     19 new      0.99    4       45   standa~  270144 yes    
-##  7 1204777~       1     13 used     0.01    0       37.0 standa~    7284 yes    
-##  8 3003555~       1     15 new      1       2.99    54.0 upsGro~    4858 yes    
-##  9 2003920~       3     29 used     0.99    4       47   priori~      27 yes    
-## 10 3303641~       7      8 used    20.0     4       50   firstC~     201 no     
-## # ... with 2 more variables: wheels <dbl>, title <chr>, and abbreviated
-## #   variable names 1: duration, 2: start_pr, 3: total_pr, 4: seller_rate,
-## #   5: stock_photo
+## # A tibble: 10 × 12
+##    id        duration n_bids cond  start_pr ship_pr total_pr ship_sp seller_rate
+##    <chr>        <dbl>  <dbl> <chr>    <dbl>   <dbl>    <dbl> <chr>         <dbl>
+##  1 15037742…        3     20 new       0.99    4        51.6 standa…        1580
+##  2 26048337…        7     13 used      0.99    3.99     37.0 firstC…         365
+##  3 32043234…        3     16 new       0.99    3.5      45.5 firstC…         998
+##  4 28040522…        3     18 new       0.99    0        44   standa…           7
+##  5 17039222…        1     20 new       0.01    0        71   media           820
+##  6 36019515…        3     19 new       0.99    4        45   standa…      270144
+##  7 12047772…        1     13 used      0.01    0        37.0 standa…        7284
+##  8 30035550…        1     15 new       1       2.99     54.0 upsGro…        4858
+##  9 20039206…        3     29 used      0.99    4        47   priori…          27
+## 10 33036416…        7      8 used     20.0     4        50   firstC…         201
+## # ℹ 3 more variables: stock_photo <chr>, wheels <dbl>, title <chr>
 ```
 
 
@@ -243,10 +241,6 @@ summary(mario_mod1)
 ## Call:
 ## glm(formula = cond == "new" ~ 1, family = "binomial", data = mariokart)
 ## 
-## Deviance Residuals: 
-##    Min      1Q  Median      3Q     Max  
-## -1.041  -1.041  -1.041   1.320   1.320  
-## 
 ## Coefficients:
 ##             Estimate Std. Error z value Pr(>|z|)  
 ## (Intercept)  -0.3292     0.1707  -1.928   0.0538 .
@@ -312,10 +306,6 @@ summary(mario_mod2)
 ## glm(formula = cond == "new" ~ stock_photo, family = "binomial", 
 ##     data = mariokart)
 ## 
-## Deviance Residuals: 
-##     Min       1Q   Median       3Q      Max  
-## -1.2181  -1.2181  -0.4854   1.1372   2.0963  
-## 
 ## Coefficients:
 ##                Estimate Std. Error z value Pr(>|z|)    
 ## (Intercept)     -2.0794     0.5303  -3.921 8.81e-05 ***
@@ -342,7 +332,7 @@ tidy(mario_mod2)
 ```
 
 ```
-## # A tibble: 2 x 5
+## # A tibble: 2 × 5
 ##   term           estimate std.error statistic   p.value
 ##   <chr>             <dbl>     <dbl>     <dbl>     <dbl>
 ## 1 (Intercept)       -2.08     0.530     -3.92 0.0000881
@@ -359,7 +349,7 @@ augment(mario_mod2,
 ```
 
 ```
-## # A tibble: 2 x 2
+## # A tibble: 2 × 2
 ##   stock_photo .fitted
 ##   <chr>         <dbl>
 ## 1 yes           0.524
@@ -419,7 +409,7 @@ tidy(mario_mod3)
 ```
 
 ```
-## # A tibble: 2 x 5
+## # A tibble: 2 × 5
 ##   term           estimate std.error statistic   p.value
 ##   <chr>             <dbl>     <dbl>     <dbl>     <dbl>
 ## 1 (Intercept)        2.08     0.530      3.92 0.0000881
@@ -436,7 +426,7 @@ augment(mario_mod3,
 ```
 
 ```
-## # A tibble: 2 x 2
+## # A tibble: 2 × 2
 ##   stock_photo .fitted
 ##   <chr>         <dbl>
 ## 1 yes           0.476
@@ -459,7 +449,7 @@ tidy(mario_mod2)
 ```
 
 ```
-## # A tibble: 2 x 5
+## # A tibble: 2 × 5
 ##   term           estimate std.error statistic   p.value
 ##   <chr>             <dbl>     <dbl>     <dbl>     <dbl>
 ## 1 (Intercept)       -2.08     0.530     -3.92 0.0000881
@@ -527,10 +517,6 @@ summary(mario_mod2)
 ## Call:
 ## glm(formula = cond == "new" ~ stock_photo, family = "binomial", 
 ##     data = mariokart)
-## 
-## Deviance Residuals: 
-##     Min       1Q   Median       3Q      Max  
-## -1.2181  -1.2181  -0.4854   1.1372   2.0963  
 ## 
 ## Coefficients:
 ##                Estimate Std. Error z value Pr(>|z|)    
@@ -630,10 +616,6 @@ summary(mario_mod4)
 ## glm(formula = cond == "new" ~ stock_photo + total_pr, family = "binomial", 
 ##     data = mariokart)
 ## 
-## Deviance Residuals: 
-##     Min       1Q   Median       3Q      Max  
-## -2.3699  -0.6479  -0.2358   0.6532   2.5794  
-## 
 ## Coefficients:
 ##                 Estimate Std. Error z value Pr(>|z|)    
 ## (Intercept)    -11.31951    1.88333  -6.010 1.85e-09 ***
@@ -700,10 +682,6 @@ summary(mario_mod5)
 ## Call:
 ## glm(formula = cond == "new" ~ stock_photo + poly(total_pr, 2), 
 ##     family = "binomial", data = mariokart)
-## 
-## Deviance Residuals: 
-##     Min       1Q   Median       3Q      Max  
-## -2.1555  -0.6511  -0.1200   0.5987   2.6760  
 ## 
 ## Coefficients:
 ##                    Estimate Std. Error z value Pr(>|z|)    
@@ -794,7 +772,7 @@ augment(mario_mod5,
 ```
 
 ```
-## # A tibble: 1 x 3
+## # A tibble: 1 × 3
 ##   stock_photo total_pr .fitted
 ##   <chr>          <dbl>   <dbl>
 ## 1 yes               50   0.693
@@ -812,7 +790,7 @@ tidy(mario_mod6)
 ```
 
 ```
-## # A tibble: 4 x 5
+## # A tibble: 4 × 5
 ##   term            estimate std.error statistic  p.value
 ##   <chr>              <dbl>     <dbl>     <dbl>    <dbl>
 ## 1 (Intercept)    -30.7       9.08        -3.38 0.000732
@@ -919,7 +897,7 @@ tidy(mario_mod4)
 ```
 
 ```
-## # A tibble: 3 x 5
+## # A tibble: 3 × 5
 ##   term           estimate std.error statistic       p.value
 ##   <chr>             <dbl>     <dbl>     <dbl>         <dbl>
 ## 1 (Intercept)     -11.3      1.88       -6.01 0.00000000185
@@ -1008,7 +986,7 @@ augment(mario_mod5,
 ```
 
 ```
-## # A tibble: 1 x 3
+## # A tibble: 1 × 3
 ##   stock_photo total_pr .fitted
 ##   <chr>          <dbl>   <dbl>
 ## 1 yes               50   0.693

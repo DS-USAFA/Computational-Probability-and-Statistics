@@ -73,6 +73,14 @@ gf_dist("binom", size = 1, prob = 0.65, plot_size = 1) %>%
   gf_labs(y = "Probability", x = "X")
 ```
 
+```
+## Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+## ℹ Please use `linewidth` instead.
+## This warning is displayed once every 8 hours.
+## Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
+## generated.
+```
+
 <div class="figure">
 <img src="21-Central-Limit-Theorem_files/figure-html/dens213-fig-1.png" alt="Binomial pmf with one trial and probability of success of 0.65." width="672" />
 <p class="caption">(\#fig:dens213-fig)Binomial pmf with one trial and probability of success of 0.65.</p>
@@ -265,7 +273,7 @@ temperature %>%
 ```
 
 ```
-## # A tibble: 1 x 3
+## # A tibble: 1 × 3
 ##    mean    sd test_stat
 ##   <dbl> <dbl>     <dbl>
 ## 1  98.2 0.733     -5.45
@@ -346,6 +354,14 @@ Figure \@ref(fig:qq211-fig) is our quantile-quantile plot for the body temperatu
 gf_qq(~temperature, data = temperature) %>%
   gf_qqline(~temperature, data = temperature) %>%
   gf_theme(theme_bw())
+```
+
+```
+## Warning: The following aesthetics were dropped during statistical transformation: sample
+## ℹ This can happen when ggplot fails to infer the correct grouping structure in
+##   the data.
+## ℹ Did you forget to specify a `group` aesthetic or to convert a numerical
+##   variable into a factor?
 ```
 
 <div class="figure">

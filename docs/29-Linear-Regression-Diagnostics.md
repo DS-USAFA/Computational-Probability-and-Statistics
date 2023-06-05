@@ -125,7 +125,7 @@ starbucks %>%
 ```
 
 ```
-## # A tibble: 1 x 2
+## # A tibble: 1 × 2
 ##   correlation correlation_squared
 ##         <dbl>               <dbl>
 ## 1       0.675               0.456

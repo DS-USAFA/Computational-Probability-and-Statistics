@@ -196,3 +196,6 @@ f. What is the probability the result is exactly 2 heads (out of 5 flips)?
 
 a. Use Bayes formula to solve this problem.  
 b. Use simulation to solve this problem.
+
+
+## [Solutions Manual](https://ds-usafa.github.io/CPS-Solutions-Manual/CONDPROB.html)

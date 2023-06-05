@@ -41,7 +41,7 @@ Each conclusion is based on data. However, there are two problems. First, the da
 (ref:quote1) In February 2010, some media pundits cited one large snow storm as evidence against global warming. As comedian Jon Stewart pointed out, *'It's one storm, in one region, of one country.'*
 
 <div class="figure" style="text-align: center">
-<img src="./figures/mnWinter.JPG" alt="(ref:quote1)" width="400" />
+<img src="./figures/mnWinter.JPG" alt="(ref:quote1)"  />
 <p class="caption">(\#fig:unnamed-chunk-1)(ref:quote1)</p>
 </div>
 

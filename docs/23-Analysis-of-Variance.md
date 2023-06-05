@@ -191,6 +191,29 @@ mlb_obp %>%
   gf_theme(theme_bw())
 ```
 
+```
+## Warning: The following aesthetics were dropped during statistical transformation: sample
+## ℹ This can happen when ggplot fails to infer the correct grouping structure in
+##   the data.
+## ℹ Did you forget to specify a `group` aesthetic or to convert a numerical
+##   variable into a factor?
+## The following aesthetics were dropped during statistical transformation: sample
+## ℹ This can happen when ggplot fails to infer the correct grouping structure in
+##   the data.
+## ℹ Did you forget to specify a `group` aesthetic or to convert a numerical
+##   variable into a factor?
+## The following aesthetics were dropped during statistical transformation: sample
+## ℹ This can happen when ggplot fails to infer the correct grouping structure in
+##   the data.
+## ℹ Did you forget to specify a `group` aesthetic or to convert a numerical
+##   variable into a factor?
+## The following aesthetics were dropped during statistical transformation: sample
+## ℹ This can happen when ggplot fails to infer the correct grouping structure in
+##   the data.
+## ℹ Did you forget to specify a `group` aesthetic or to convert a numerical
+##   variable into a factor?
+```
+
 <div class="figure">
 <img src="23-Analysis-of-Variance_files/figure-html/qq233-fig-1.png" alt="Quantile-quantile plot for two-sample test of means." width="672" />
 <p class="caption">(\#fig:qq233-fig)Quantile-quantile plot for two-sample test of means.</p>
@@ -266,7 +289,7 @@ aov(obp ~ position, data = mlb_obp) %>%
 ```
 
 ```
-## # A tibble: 2 x 6
+## # A tibble: 2 × 6
 ##   term         df   sumsq  meansq statistic p.value
 ##   <chr>     <dbl>   <dbl>   <dbl>     <dbl>   <dbl>
 ## 1 position      3 0.00756 0.00252      1.99   0.115
@@ -283,7 +306,7 @@ aov(obp ~ position, data = mlb_obp) %>%
 ```
 
 ```
-## # A tibble: 1 x 1
+## # A tibble: 1 × 1
 ##    stat
 ##   <dbl>
 ## 1  1.99

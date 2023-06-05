@@ -162,13 +162,13 @@ glimpse(starbucks)
 ```
 ## Rows: 77
 ## Columns: 7
-## $ item     <chr> "8-Grain Roll", "Apple Bran Muffin", "Apple Fritter", "Banana~
-## $ calories <dbl> 350, 350, 420, 490, 130, 370, 460, 370, 310, 420, 380, 320, 3~
-## $ fat      <dbl> 8, 9, 20, 19, 6, 14, 22, 14, 18, 25, 17, 12, 17, 21, 5, 18, 1~
-## $ carb     <dbl> 67, 64, 59, 75, 17, 47, 61, 55, 32, 39, 51, 53, 34, 57, 52, 7~
-## $ fiber    <dbl> 5, 7, 0, 4, 0, 5, 2, 0, 0, 0, 2, 3, 2, 2, 3, 3, 2, 3, 0, 2, 0~
-## $ protein  <dbl> 10, 6, 5, 7, 0, 6, 7, 6, 5, 7, 4, 6, 5, 5, 12, 7, 8, 6, 0, 10~
-## $ type     <fct> bakery, bakery, bakery, bakery, bakery, bakery, bakery, baker~
+## $ item     <chr> "8-Grain Roll", "Apple Bran Muffin", "Apple Fritter", "Banana…
+## $ calories <dbl> 350, 350, 420, 490, 130, 370, 460, 370, 310, 420, 380, 320, 3…
+## $ fat      <dbl> 8, 9, 20, 19, 6, 14, 22, 14, 18, 25, 17, 12, 17, 21, 5, 18, 1…
+## $ carb     <dbl> 67, 64, 59, 75, 17, 47, 61, 55, 32, 39, 51, 53, 34, 57, 52, 7…
+## $ fiber    <dbl> 5, 7, 0, 4, 0, 5, 2, 0, 0, 0, 2, 3, 2, 2, 3, 3, 2, 3, 0, 2, 0…
+## $ protein  <dbl> 10, 6, 5, 7, 0, 6, 7, 6, 5, 7, 4, 6, 5, 5, 12, 7, 8, 6, 0, 10…
+## $ type     <fct> bakery, bakery, bakery, bakery, bakery, bakery, bakery, baker…
 ```
 
 
@@ -330,7 +330,7 @@ tidy(star_mod)
 ```
 
 ```
-## # A tibble: 2 x 5
+## # A tibble: 2 × 5
 ##   term        estimate std.error statistic  p.value
 ##   <chr>          <dbl>     <dbl>     <dbl>    <dbl>
 ## 1 (Intercept)   146.      25.9        5.63 2.93e- 7
@@ -347,7 +347,7 @@ tidy(star_mod) %>%
 ```
 
 ```
-## # A tibble: 1 x 2
+## # A tibble: 1 × 2
 ##   test_stat  p_value
 ##       <dbl>    <dbl>
 ## 1      7.92 1.97e-11
@@ -402,6 +402,22 @@ starbucks %>%
   gf_theme(theme_classic())
 ```
 
+```
+## Warning: Using the `size` aesthetic with geom_ribbon was deprecated in ggplot2 3.4.0.
+## ℹ Please use the `linewidth` aesthetic instead.
+## This warning is displayed once every 8 hours.
+## Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
+## generated.
+```
+
+```
+## Warning: Using the `size` aesthetic with geom_line was deprecated in ggplot2 3.4.0.
+## ℹ Please use the `linewidth` aesthetic instead.
+## This warning is displayed once every 8 hours.
+## Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
+## generated.
+```
+
 <div class="figure">
 <img src="28-Linear-Regression-Inference_files/figure-html/ci271-fig-1.png" alt="Confidence and predictions bands for linear regression model of calories and carbs in Starbucks' products." width="672" />
 <p class="caption">(\#fig:ci271-fig)Confidence and predictions bands for linear regression model of calories and carbs in Starbucks' products.</p>
@@ -431,7 +447,7 @@ augment(star_mod,newdata=new_carb,interval="confidence")
 ```
 
 ```
-## # A tibble: 2 x 4
+## # A tibble: 2 × 4
 ##    carb .fitted .lower .upper
 ##   <dbl>   <dbl>  <dbl>  <dbl>
 ## 1    60    404.   380.   428.

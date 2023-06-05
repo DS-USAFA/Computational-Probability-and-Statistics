@@ -142,7 +142,7 @@ hfi %>%
 ```
 
 ```
-## # A tibble: 1 x 1
+## # A tibble: 1 × 1
 ##   `cor(pf_expression_control, pf_score, use = "complete.obs")`
 ##                                                          <dbl>
 ## 1                                                        0.796
@@ -421,7 +421,7 @@ hfi_sub %>%
 ```
 
 ```
-## # A tibble: 1 x 3
+## # A tibble: 1 × 3
 ## # Groups:   pf_expression_control [1]
 ##   pf_expression_control pf_score hf_score
 ##                   <dbl>    <dbl>    <dbl>
@@ -455,7 +455,7 @@ augment(m1) %>%
 ```
 
 ```
-## # A tibble: 1 x 8
+## # A tibble: 1 × 8
 ##   pf_score pf_expression_control .fitted .resid   .hat .sigma .cooksd .std.resid
 ##      <dbl>                 <dbl>   <dbl>  <dbl>  <dbl>  <dbl>   <dbl>      <dbl>
 ## 1     8.63                  6.75    7.86  0.767 0.0421  0.727  0.0254       1.08

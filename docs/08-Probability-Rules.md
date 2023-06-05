@@ -26,7 +26,7 @@ Even though an outcome is determined by chance, this does not mean that we know 
 It is important to distinguish probability from inference and modeling. In probability, we consider a known random experiment, including knowing the parameters, and answer questions about what we expect to see from this random experiment. In statistics (inference and modeling), we consider data (the results of a mysterious random experiment) and infer about the underlying process. For example, suppose we have a coin and we are unsure whether this coin is fair or unfair, the parameter is unknown. We flipped it 20 times and it landed on heads 14 times. Inferential statistics will help us answer questions about the underlying process (could this coin be unfair?). 
 
 <div class="figure" style="text-align: center">
-<img src="figures/Prob_Stats.png" alt="A graphical representation of probability and statistics. In probability, we describe what we expect to happen if we know that underlying process; in statistics, we don't know the underlying process, and must infer based on representative samples." width="576" />
+<img src="figures/Prob_Stats.png" alt="A graphical representation of probability and statistics. In probability, we describe what we expect to happen if we know that underlying process; in statistics, we don't know the underlying process, and must infer based on representative samples."  />
 <p class="caption">(\#fig:prob-stats)A graphical representation of probability and statistics. In probability, we describe what we expect to happen if we know that underlying process; in statistics, we don't know the underlying process, and must infer based on representative samples.</p>
 </div>
 
@@ -301,7 +301,7 @@ head(Cards)
 ```
 
 ```
-## # A tibble: 6 x 3
+## # A tibble: 6 × 3
 ##   rank  suit   probs
 ##   <chr> <chr>  <dbl>
 ## 1 2     Club  0.0192
@@ -329,7 +329,7 @@ Cards %>%
 ```
 
 ```
-## # A tibble: 13 x 2
+## # A tibble: 13 × 2
 ##    rank  suit 
 ##    <chr> <chr>
 ##  1 2     Club 
@@ -360,7 +360,7 @@ head(results)
 ```
 
 ```
-## # A tibble: 6 x 6
+## # A tibble: 6 × 6
 ##   rank  suit   probs orig.id  .row .index
 ##   <chr> <chr>  <dbl> <chr>   <int>  <dbl>
 ## 1 9     Spade 0.0192 47          1      1
@@ -379,7 +379,7 @@ results %>%
 ```
 
 ```
-## # A tibble: 1 x 1
+## # A tibble: 1 × 1
 ##    prob
 ##   <dbl>
 ## 1 0.243
@@ -393,7 +393,7 @@ results %>%
 ```
 
 ```
-## # A tibble: 4 x 3
+## # A tibble: 4 × 3
 ##   suit        n  prob
 ##   <chr>   <int> <dbl>
 ## 1 Club     2432 0.243
@@ -413,7 +413,7 @@ Cards %>%
 ```
 
 ```
-## # A tibble: 20 x 2
+## # A tibble: 20 × 2
 ##    rank  suit   
 ##    <chr> <chr>  
 ##  1 10    Club   
@@ -450,7 +450,7 @@ head(results)
 ```
 
 ```
-## # A tibble: 6 x 6
+## # A tibble: 6 × 6
 ##   rank  suit   probs orig.id  .row .index
 ##   <chr> <chr>  <dbl> <chr>   <int>  <dbl>
 ## 1 10    Heart 0.0192 35          1      1
@@ -469,7 +469,7 @@ results %>%
 ```
 
 ```
-## # A tibble: 1 x 1
+## # A tibble: 1 × 1
 ##    prob
 ##   <dbl>
 ## 1 0.389
@@ -485,7 +485,7 @@ results %>%
 ```
 
 ```
-## # A tibble: 1 x 1
+## # A tibble: 1 × 1
 ##    prob
 ##   <dbl>
 ## 1 0.389
@@ -503,7 +503,7 @@ Cards %>%
 ```
 
 ```
-## # A tibble: 5 x 2
+## # A tibble: 5 × 2
 ##   rank  suit 
 ##   <chr> <chr>
 ## 1 10    Club 
@@ -528,7 +528,7 @@ results %>%
 ```
 
 ```
-## # A tibble: 1 x 1
+## # A tibble: 1 × 1
 ##     prob
 ##    <dbl>
 ## 1 0.0963
@@ -741,7 +741,7 @@ b.  What is the probability of drawing a "four of a kind" (four cards of the sam
 8. Advanced Question: Consider rolling 5 dice. What is the **probability** of a pour resulting in a full house?
 
 
-
+## [Solutions Manual](https://ds-usafa.github.io/CPS-Solutions-Manual/PROBRULES.html)
 
 
 

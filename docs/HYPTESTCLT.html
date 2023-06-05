@@ -11,7 +11,7 @@
 <meta name="author" content="Kris Pruitt">
 <meta name="author" content="Bradley Warner">
 <meta name="description" content="21.1 Objectives Explain the central limit theorem and when it can be used for inference. Conduct hypothesis tests of a single mean and proportion using the CLT and R. Explain how the \(t\)...">
-<meta name="generator" content="bookdown 0.31 with bs4_book()">
+<meta name="generator" content="bookdown 0.34 with bs4_book()">
 <meta property="og:title" content="Chapter 21 Hypothesis Testing with the Central Limit Theorem | Computational Probability and Statistics">
 <meta property="og:type" content="book">
 <meta property="og:image" content="/figures/Cover_Majors.png">
@@ -184,11 +184,16 @@ Figure 21.2: Sampling distribution of the sample proportion.
 </h3>
 <p>For this section, we are going to use an artificial example where we know the population distribution and parameters. We will repeat sampling from this population distribution many times and plot the distribution of the summary statistic of interest, the sample mean, to demonstrate the CLT. This is purely an educational thought experiment to give ourselves confidence about the validity of the CLT.</p>
 <p>Suppose there is an upcoming election in Colorado and Proposition A is on the ballot. Now suppose that 65% of Colorado voters support Proposition A. We poll a random sample of <span class="math inline">\(n\)</span> Colorado voters. Prior to conducting the sample, we can think about the sample as a sequence of i.i.d. random variables (voters) from the binomial distribution with one trial (vote) in each run and a probability of success (support for the measure) of 0.65. In other words, each random variable will take a value of 1 (support) or 0 (oppose). Figure <a href="HYPTESTCLT.html#fig:dens213-fig">21.3</a> is a plot of the pmf of the parent distribution (<span class="math inline">\(\textsf{Binom}(1,\, 0.65)\)</span>):</p>
-<div class="sourceCode" id="cb576"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb575"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">gf_dist</span><span class="op">(</span><span class="st">"binom"</span>, size <span class="op">=</span> <span class="fl">1</span>, prob <span class="op">=</span> <span class="fl">0.65</span>, plot_size <span class="op">=</span> <span class="fl">1</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu">gf_theme</span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_classic</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu">gf_theme</span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_x_continuous</a></span><span class="op">(</span>breaks <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">1</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu">gf_labs</span><span class="op">(</span>y <span class="op">=</span> <span class="st">"Probability"</span>, x <span class="op">=</span> <span class="st">"X"</span><span class="op">)</span></span></code></pre></div>
+<pre><code>## Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+## ℹ Please use `linewidth` instead.
+## This warning is displayed once every 8 hours.
+## Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
+## generated.</code></pre>
 <div class="figure">
 <span style="display:block;" id="fig:dens213-fig"></span>
 <img src="21-Central-Limit-Theorem_files/figure-html/dens213-fig-1.png" alt="Binomial pmf with one trial and probability of success of 0.65." width="672"><p class="caption">
@@ -334,7 +339,7 @@ Thus, our test statistic is</p>
 <code class="sourceCode R"><span><span class="va">temperature</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span>mean <span class="op">=</span> <span class="fu">mean</span><span class="op">(</span><span class="va">temperature</span><span class="op">)</span>, sd <span class="op">=</span> <span class="fu"><a href="https://www.mosaic-web.org/mosaic/reference/aggregating.html">sd</a></span><span class="op">(</span><span class="va">temperature</span><span class="op">)</span>, </span>
 <span>            test_stat <span class="op">=</span> <span class="op">(</span><span class="va">mean</span> <span class="op">-</span> <span class="fl">98.6</span><span class="op">)</span> <span class="op">/</span> <span class="op">(</span><span class="va">sd</span> <span class="op">/</span> <span class="fu"><a href="https://rdrr.io/r/base/MathFun.html">sqrt</a></span><span class="op">(</span><span class="fl">130</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
-<pre><code>## # A tibble: 1 x 3
+<pre><code>## # A tibble: 1 × 3
 ##    mean    sd test_stat
 ##   &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;
 ## 1  98.2 0.733     -5.45</code></pre>
@@ -399,6 +404,11 @@ Thus, our test statistic is</p>
 <code class="sourceCode R"><span><span class="fu">gf_qq</span><span class="op">(</span><span class="op">~</span><span class="va">temperature</span>, data <span class="op">=</span> <span class="va">temperature</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu">gf_qqline</span><span class="op">(</span><span class="op">~</span><span class="va">temperature</span>, data <span class="op">=</span> <span class="va">temperature</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu">gf_theme</span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_bw</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<pre><code>## Warning: The following aesthetics were dropped during statistical transformation: sample
+## ℹ This can happen when ggplot fails to infer the correct grouping structure in
+##   the data.
+## ℹ Did you forget to specify a `group` aesthetic or to convert a numerical
+##   variable into a factor?</code></pre>
 <div class="figure">
 <span style="display:block;" id="fig:qq211-fig"></span>
 <img src="21-Central-Limit-Theorem_files/figure-html/qq211-fig-1.png" alt="Q-Q plot for body temperature data." width="672"><p class="caption">
@@ -442,7 +452,7 @@ Figure 21.8: Q-Q plot for body temperature data.
 <span class="header-section-number">21.5.3.3</span> Step 3 - Determine the <span class="math inline">\(p\)</span>-value.<a class="anchor" aria-label="anchor" href="#step-3---determine-the-p-value.-6"><i class="fas fa-link"></i></a>
 </h4>
 <p>We now want to find the <span class="math inline">\(p\)</span>-value from the one-sided probability <span class="math inline">\(\mbox{P}(\bar{X} \leq 0.35)\)</span>, given the null hypothesis is true. That is, given that the true probability of success is 0.50. We will use <code>R</code> to get the one-sided value and then double it since the test is two-sided and the sampling distribution is symmetrical.</p>
-<div class="sourceCode" id="cb595"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb596"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fl">2</span><span class="op">*</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">pnorm</a></span><span class="op">(</span><span class="fl">0.35</span>, mean <span class="op">=</span> <span class="fl">0.5</span>, sd <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/MathFun.html">sqrt</a></span><span class="op">(</span><span class="fl">0.5</span><span class="op">*</span><span class="fl">0.5</span> <span class="op">/</span> <span class="fl">120</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <pre><code>## [1] 0.001015001</code></pre>
 <p>That is a small <span class="math inline">\(p\)</span>-value and consistent with what we got using both the exact binomial test and the simulated empirical <span class="math inline">\(p\)</span>-values in Chapter <a href="HYPTESTDIST.html#HYPTESTDIST">20</a>.</p>
@@ -458,7 +468,7 @@ In the calculation of the standard deviation of the sampling distribution, we us
 <p>Based on our data, if the listeners were guessing correct 50% of the time, there is about a 1-in-1000 chance that only 42 or less, or 78 or more, listeners would get it right. This is much less than 0.05, so we reject the null hypothesis that the listeners are guessing correctly half of the time. There is sufficient evidence to conclude that the true correct-guess rate is different from 50%.</p>
 <p>Note that <code>R</code> has built in functions to perform this test. If you explore these functions, use <code><a href="https://www.mosaic-web.org/mosaic/reference/prop.test.html">help(prop.test)</a></code> or <code><a href="https://www.mosaic-web.org/mosaic/reference/prop.test.html">?prop.test</a></code> to learn more. You will find options to improve the performance of the test. You are welcome to and should read about these methods. Again, before computers, researchers spent time optimizing the performance of the asymptotic methods such as the CLT.</p>
 <p>Here is the test of a single proportion for the tapper-listener example using <code>R</code>.</p>
-<div class="sourceCode" id="cb597"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb598"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://www.mosaic-web.org/mosaic/reference/prop.test.html">prop.test</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fl">42</span>, n <span class="op">=</span> <span class="fl">120</span>, p <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span></span></code></pre></div>
 <pre><code>## 
 ##  1-sample proportions test with continuity correction
@@ -476,12 +486,12 @@ In the calculation of the standard deviation of the sampling distribution, we us
 <p><strong>Exercise</strong>:<br>
 How do you conduct a one-sided test? What if the null value were 0.45?<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content='&lt;p&gt;We will only extract the &lt;span class="math inline"&gt;\(p\)&lt;/span&gt;-value in this exercise.&lt;/p&gt;'><sup>97</sup></a></p>
 </blockquote>
-<div class="sourceCode" id="cb599"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb600"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://www.mosaic-web.org/mosaic/reference/interval.html">pval</a></span><span class="op">(</span><span class="fu"><a href="https://www.mosaic-web.org/mosaic/reference/prop.test.html">prop.test</a></span><span class="op">(</span><span class="fl">42</span>, <span class="fl">120</span>, alternative <span class="op">=</span> <span class="st">"less"</span>, p <span class="op">=</span> <span class="fl">0.45</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <pre><code>##   p.value 
 ## 0.0174214</code></pre>
 <p>The exact test uses the function <code><a href="https://www.mosaic-web.org/mosaic/reference/binom.test.html">binom.test()</a></code>.</p>
-<div class="sourceCode" id="cb601"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb602"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://www.mosaic-web.org/mosaic/reference/binom.test.html">binom.test</a></span><span class="op">(</span><span class="fl">42</span>,<span class="fl">120</span><span class="op">)</span></span></code></pre></div>
 <pre><code>## 
 ## 
@@ -495,7 +505,7 @@ How do you conduct a one-sided test? What if the null value were 0.45?<a class="
 ## probability of success 
 ##                   0.35</code></pre>
 <p>This is the same as the code we used in Chapter <a href="HYPTESTDIST.html#HYPTESTDIST">20</a>:</p>
-<div class="sourceCode" id="cb603"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb604"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fl">2</span><span class="op">*</span><span class="fu"><a href="https://rdrr.io/r/stats/Binomial.html">pbinom</a></span><span class="op">(</span><span class="fl">42</span>, <span class="fl">120</span>, prob <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span></span></code></pre></div>
 <pre><code>## [1] 0.001299333</code></pre>
 </div>
@@ -608,7 +618,7 @@ How do you conduct a one-sided test? What if the null value were 0.45?<a class="
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Computational Probability and Statistics</strong>" was written by Matthew Davis, Brianna Hitt, Ken Horton, Kris Pruitt, Bradley Warner. It was last built on 2023-01-04.</p>
+    <p>"<strong>Computational Probability and Statistics</strong>" was written by Matthew Davis, Brianna Hitt, Ken Horton, Kris Pruitt, Bradley Warner. It was last built on 2023-06-05.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

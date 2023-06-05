@@ -28,7 +28,7 @@ In some sense, we've already explored some of these concepts. In our simulation 
 Statistical models and probability models are not separate. In statistical models we find relationships, the explained portion of variation, and use probability models for the remaining random variation. In Figure \@ref(fig:prob-stats), we demonstrate this relationship between the two types of models. In the first part of our studies, we will use univariate data in statistical models to estimate the parameters of a probability model. From there we will develop more sophisticated models to include multivariate models.
 
 <div class="figure" style="text-align: center">
-<img src="figures/Prob_Stats.png" alt="A graphical representation of probability and statistics. In probability, we describe what we expect to happen if we know that underlying process; in statistics, we don't know the underlying process, and must infer based on representative samples." width="576" />
+<img src="figures/Prob_Stats.png" alt="A graphical representation of probability and statistics. In probability, we describe what we expect to happen if we know that underlying process; in statistics, we don't know the underlying process, and must infer based on representative samples."  />
 <p class="caption">(\#fig:prob-stats)A graphical representation of probability and statistics. In probability, we describe what we expect to happen if we know that underlying process; in statistics, we don't know the underlying process, and must infer based on representative samples.</p>
 </div>
 
@@ -189,11 +189,6 @@ $$
 
 Figure \@ref(fig:lik1-fig) is a plot of the likelihood function as a function of the unknown parameter $\pi$.
 
-
-
-```
-## Warning: geom_vline(): Ignoring `mapping` because `xintercept` was provided.
-```
 
 <div class="figure">
 <img src="17-Estimation-Methods_files/figure-html/lik1-fig-1.png" alt="Likelihood function for 18 successes in 50 trials" width="672" />

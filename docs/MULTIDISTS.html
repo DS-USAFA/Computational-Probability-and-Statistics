@@ -11,7 +11,7 @@
 <meta name="author" content="Kris Pruitt">
 <meta name="author" content="Bradley Warner">
 <meta name="description" content="14.1 Objectives Define (and distinguish between) the terms joint probability mass/density function, marginal pmf/pdf, and conditional pmf/pdf. Given a joint pmf/pdf, obtain the marginal and...">
-<meta name="generator" content="bookdown 0.31 with bs4_book()">
+<meta name="generator" content="bookdown 0.34 with bs4_book()">
 <meta property="og:title" content="Chapter 14 Multivariate Distributions | Computational Probability and Statistics">
 <meta property="og:type" content="book">
 <meta property="og:image" content="/figures/Cover_Majors.png">
@@ -204,7 +204,7 @@ f_Y(y)=\left\{\begin{array}{ll} 0.35, &amp; y=0 \\
 \end{array}\right.
 \]</span></p>
 <p>To find the conditional pmf of <span class="math inline">\(X\)</span> given <span class="math inline">\(Y=0\)</span>, it helps to recognize that once we know that <span class="math inline">\(Y=0\)</span>, the overall sample space has changed. Now the only outcomes we consider are in the first column (corresponding to <span class="math inline">\(Y=0\)</span>):</p>
-<div class="inline-figure"><img src="figures/Lesson14Table.png" width="576" style="display: block; margin: auto;"></div>
+<div class="inline-figure"><img src="figures/Lesson14Table.png" style="display: block; margin: auto;"></div>
 <p>We are looking for the distribution of <span class="math inline">\(X\)</span> within the circled area. So, we need to find the proportion of probability assigned to each outcome of <span class="math inline">\(X\)</span>. Mathematically:
 <span class="math display">\[
 f_{X|Y=0}(x)=\mbox{P}(X=x|Y=0)=\frac{\mbox{P}(X=x,Y=0)}{\mbox{P}(Y=0)}=\frac{f_{X,Y}(x,0)}{f_Y(0)}
@@ -452,7 +452,7 @@ f_{X,Y}(x,y)=1
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Computational Probability and Statistics</strong>" was written by Matthew Davis, Brianna Hitt, Ken Horton, Kris Pruitt, Bradley Warner. It was last built on 2023-01-04.</p>
+    <p>"<strong>Computational Probability and Statistics</strong>" was written by Matthew Davis, Brianna Hitt, Ken Horton, Kris Pruitt, Bradley Warner. It was last built on 2023-06-05.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

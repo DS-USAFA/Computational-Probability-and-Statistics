@@ -87,7 +87,7 @@ $$
 
 To find the conditional pmf of $X$ given $Y=0$, it helps to recognize that once we know that $Y=0$, the overall sample space has changed. Now the only outcomes we consider are in the first column (corresponding to $Y=0$): 
 
-<img src="figures/Lesson14Table.png" width="576" style="display: block; margin: auto;" />
+<img src="figures/Lesson14Table.png" style="display: block; margin: auto;" />
 
 We are looking for the distribution of $X$ within the circled area. So, we need to find the proportion of probability assigned to each outcome of $X$. Mathematically:
 $$

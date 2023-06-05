@@ -18,7 +18,7 @@ Next we learned about probability models. These models allowed us to use assumpt
 Now we are moving more in depth into statistical models. This is going to tie all the ideas together. We are going to use data from a sample and ideas of randomization to make conclusions about a population. This will require probability models, descriptive models, and some new ideas and terminology. We will generate point estimates for a metric designed to answer the research question and then find ways to determine the variability of the metric. In Figure \@ref(fig:prob-stats2), we demonstrate this relationship between probability and statistical models. 
 
 <div class="figure" style="text-align: center">
-<img src="figures/Prob_Stats.png" alt="A graphical representation of probability and statistics. In probability, we describe what we expect to happen in a sample if we know the underlying process; in statistics, we don't know the underlying process, and must infer about the population based on representative samples." width="576" />
+<img src="figures/Prob_Stats.png" alt="A graphical representation of probability and statistics. In probability, we describe what we expect to happen in a sample if we know the underlying process; in statistics, we don't know the underlying process, and must infer about the population based on representative samples."  />
 <p class="caption">(\#fig:prob-stats2)A graphical representation of probability and statistics. In probability, we describe what we expect to happen in a sample if we know the underlying process; in statistics, we don't know the underlying process, and must infer about the population based on representative samples.</p>
 </div>
 
@@ -64,7 +64,7 @@ ads
 ```
 
 ```
-## # A tibble: 10 x 2
+## # A tibble: 10 × 2
 ##    basic premium
 ##    <dbl>   <dbl>
 ##  1  6.95    3.38
@@ -87,8 +87,8 @@ glimpse(ads)
 ```
 ## Rows: 10
 ## Columns: 2
-## $ basic   <dbl> 6.950, 10.013, 10.620, 10.150, 8.583, 7.620, 8.233, 10.350, 11~
-## $ premium <dbl> 3.383, 7.800, 9.416, 4.660, 5.360, 7.630, 4.950, 8.013, 7.800,~
+## $ basic   <dbl> 6.950, 10.013, 10.620, 10.150, 8.583, 7.620, 8.233, 10.350, 11…
+## $ premium <dbl> 3.383, 7.800, 9.416, 4.660, 5.360, 7.630, 4.950, 8.013, 7.800,…
 ```
 
 
@@ -104,7 +104,7 @@ ads
 ```
 
 ```
-## # A tibble: 20 x 2
+## # A tibble: 20 × 2
 ##    channel length
 ##    <chr>    <dbl>
 ##  1 basic     6.95
@@ -515,7 +515,7 @@ thinner
 ```
 
 ```
-## # A tibble: 90 x 2
+## # A tibble: 90 × 2
 ##    group     outcome 
 ##    <chr>     <chr>   
 ##  1 treatment survived
@@ -528,7 +528,7 @@ thinner
 ##  8 control   died    
 ##  9 treatment died    
 ## 10 treatment survived
-## # ... with 80 more rows
+## # ℹ 80 more rows
 ```
 
 

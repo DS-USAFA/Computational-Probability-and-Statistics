@@ -499,8 +499,7 @@ prop_test(outcome ~ group, data = thinner, correct = FALSE)
 
 ```
 ## 
-## 	2-sample test for equality of proportions without continuity
-## 	correction
+## 	2-sample test for equality of proportions without continuity correction
 ## 
 ## data:  tally(outcome ~ group)
 ## X-squared = 1.872, df = 1, p-value = 0.1712
