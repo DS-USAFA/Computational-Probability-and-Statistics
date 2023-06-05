@@ -393,4 +393,4 @@ g. Do a numerical summary of the data and plot a density plot of your exercise t
 h. Create the new variable that is the sum of the two exercise time and then find the probability that the sum is less than 40.  
 
 
-
+## [Solutions Manual](https://ds-usafa.github.io/CPS-Solutions-Manual/TRANS.html)  {-}

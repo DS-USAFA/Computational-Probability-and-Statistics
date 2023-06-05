@@ -741,7 +741,7 @@ b.  What is the probability of drawing a "four of a kind" (four cards of the sam
 8. Advanced Question: Consider rolling 5 dice. What is the **probability** of a pour resulting in a full house?
 
 
-## [Solutions Manual](https://ds-usafa.github.io/CPS-Solutions-Manual/PROBRULES.html)
+## [Solutions Manual](https://ds-usafa.github.io/CPS-Solutions-Manual/PROBRULES.html)  {-}
 
 
 

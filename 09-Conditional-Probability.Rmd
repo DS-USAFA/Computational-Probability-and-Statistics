@@ -180,4 +180,5 @@ a. Use Bayes formula to solve this problem.
 b. Use simulation to solve this problem.
 
 
-## [Solutions Manual](https://ds-usafa.github.io/CPS-Solutions-Manual/CONDPROB.html)
+## [Solutions Manual](https://ds-usafa.github.io/CPS-Solutions-Manual/CONDPROB.html)  {-}
+

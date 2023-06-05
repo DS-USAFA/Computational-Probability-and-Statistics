@@ -357,3 +357,8 @@ i. Simulate 10000 values from this distribution and plot the density.
 
 2. Let $X$ be a continuous random variable. Prove that the cdf of $X$, $F_X(x)$ is a non-decreasing function. (Hint: show that for any $a < b$, $F_X(a) \leq F_X(b)$.)
 
+
+
+## [Solutions Manual](https://ds-usafa.github.io/CPS-Solutions-Manual/CONRANDVAR.html)  {-}
+
+
