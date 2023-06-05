@@ -359,6 +359,6 @@ i. Simulate 10000 values from this distribution and plot the density.
 
 
 
-## [Solutions Manual](https://ds-usafa.github.io/CPS-Solutions-Manual/CONRANDVAR.html)  {-}
+## [Solutions Manual](https://ds-usafa.github.io/CPS-Solutions-Manual/CONRANDVAR.html) {-}
 
 

@@ -427,5 +427,5 @@ e. Advanced: In `R`, obtain 10,000 realizations of $Y$. In other words, simulate
 6. We saw that $\Var(X)=\E[(X-\mu_X)^2]$. Show that $\Var(X)$ is also equal to $\E(X^2)-[\E(X)]^2$. 
 
 
-## [Solutions Manual](https://ds-usafa.github.io/CPS-Solutions-Manual/RANDVAR.html)  {-}
+## [Solutions Manual](https://ds-usafa.github.io/CPS-Solutions-Manual/RANDVAR.html) {-}
 
