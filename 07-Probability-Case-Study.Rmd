@@ -421,4 +421,4 @@ c. Vectorize the function.
 d. Plot the probability of exactly 2 people having the same birthday versus number of people in the room.  
 e. Comment on the shape of the curve and explain it.  
 
-## [Solutions Manual](https://ds-usafa.github.io/CPS-Solutions-Manual/CS2.html)  {-}
+## [Solutions Manual](https://ds-usafa.github.io/CPS-Solutions-Manual/CS2.html) {-}
