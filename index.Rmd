@@ -69,6 +69,12 @@ To take this course, students are expected to have completed calculus up through
 
 These notes make use of the following packages in `R`: **knitr** [@R-knitr], **rmarkdown** [@R-rmarkdown], **mosaic** [@R-mosaic], **mosaicCalc** [@R-mosaicCalc], **tidyverse** [@R-tidyverse], **ISLR** [@R-ISLR], **vcd** [@R-vcd], **ggplot2** [@R-ggplot2], **MASS** [@R-MASS], **openintro** [@R-openintro], **broom** [@R-broom], **infer** [@R-infer],  **kableExtra** [@R-kableExtra], and **DT** [@R-DT].
 
+
+## Solutions Manual {-}
+
+The accompanying solutions manual is available [here](https://ds-usafa.github.io/CPS-Solutions-Manual/).
+
+
 ## Acknowledgements 
 
 We have been lucky to have numerous open sources to help facilitate this work. Thank you to those who helped to correct mistakes to include Skyler Royse.

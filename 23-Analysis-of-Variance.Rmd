@@ -347,3 +347,4 @@ census %>%
 ```
 
 
+## [Solutions Manual](https://ds-usafa.github.io/CPS-Solutions-Manual/ANOVA.html) {-}

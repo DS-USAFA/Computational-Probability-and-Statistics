@@ -367,6 +367,6 @@ d) ADVANCED: Use simulation in `R` to find out how often the method of moment es
 5. Find a maximum likelihood estimator for $\theta$ when $X\sim\textsf{Unif}(0,\theta)$. Compare this to the method of moments estimator we found. Hint: Do not take the derivative of the likelihood function. 
 
 
-## [Solutions Manual](https://ds-usafa.github.io/CPS-Solutions-Manual/EST.html)  {-}
+## [Solutions Manual](https://ds-usafa.github.io/CPS-Solutions-Manual/EST.html) {-}
 
 
