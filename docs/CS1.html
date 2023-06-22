@@ -331,7 +331,18 @@ Figure 1.2: Bar charts conditioned on the <code>group</code> variable.
 </h4>
 <p>As a prelude for things to come, the above graphic needs work. The labels don’t help and there is no title. We could add color. Does it make more sense to use proportions? Here is the code and results for a better graph, see Figure <a href="CS1.html#fig:cs1-fig">1.3</a>. Don’t worry if this seems a bit advanced, but feel free to examine each new component of this code.</p>
 <div class="sourceCode" id="cb21"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">stent_study</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<code class="sourceCode R"><span><span class="co"># This code creates a graph showing the impact of stents on stroke.</span></span>
+<span><span class="co"># The `gf_props()` function creates a bar graph showing the number of events</span></span>
+<span><span class="co"># for each experimental group. The `fill` argument specifies the fill color</span></span>
+<span><span class="co"># for each group. The `position = 'fill'` argument specifies that the bars</span></span>
+<span><span class="co"># should be filled to the top.</span></span>
+<span></span>
+<span><span class="co"># The `gf_labs()` function adds the title, subtitle, x-axis label, and y-axis</span></span>
+<span><span class="co"># label to the graph.</span></span>
+<span></span>
+<span><span class="co"># The `gf_theme()` function applies a black-and-white theme to the graph.</span></span>
+<span></span>
+<span><span class="va">stent_study</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span><span class="fu">gf_props</span><span class="op">(</span><span class="op">~</span><span class="va">group</span>, fill <span class="op">=</span> <span class="op">~</span><span class="va">outcome30</span>, position <span class="op">=</span> <span class="st">'fill'</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu">gf_labs</span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Impact of Stents of Stroke"</span>,</span>
 <span>          subtitle <span class="op">=</span> <span class="st">'Experiment with 451 Patients'</span>,</span>

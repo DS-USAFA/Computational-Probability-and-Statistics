@@ -305,6 +305,17 @@ As a prelude for things to come, the above graphic needs work. The labels don't 
 
 
 ```r
+# This code creates a graph showing the impact of stents on stroke.
+# The `gf_props()` function creates a bar graph showing the number of events
+# for each experimental group. The `fill` argument specifies the fill color
+# for each group. The `position = 'fill'` argument specifies that the bars
+# should be filled to the top.
+
+# The `gf_labs()` function adds the title, subtitle, x-axis label, and y-axis
+# label to the graph.
+
+# The `gf_theme()` function applies a black-and-white theme to the graph.
+
 stent_study %>%
 gf_props(~group, fill = ~outcome30, position = 'fill') %>%
   gf_labs(title = "Impact of Stents of Stroke",
