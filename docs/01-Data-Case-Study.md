@@ -91,14 +91,32 @@ library(mosaic)
 
 
 
-Next read in the data into the working environment.
+Next read in the data into the working environment. 
 
 
 ```r
+# This code reads the `stent_study.csv` file into the `stent_study` object.
 stent_study <- read_csv("data/stent_study.csv")
 ```
 
-Let's break this code down. We are reading from a .csv file and assigning the results into an object called `stent_study`. The assignment arrow `<-` means we assign what is on the right to what is on the left. The `R` function we use in this case is `read_csv()`. When using `R` functions, you should ask yourself:  
+Note on commenting code: It is good practice to comment code. Here are some of the best practices for commenting computer code:
+
+**Comments should explain why code is written the way it is, rather than explaining what the code does.** This means that you should explain the intent of the code, not just the steps that it takes to achieve that intent.  
+**Comments should be brief and to the point.** There is no need to write long, rambling comments. Just write enough to explain what the code is doing and why.  
+**Comments should be clear and concise.** Use plain language that is easy to understand. Avoid jargon and technical terms that the reader may not be familiar with.  
+**Comments should be consistent with the style of the code.** If the code is written in a formal style, then the comments should also be formal. If the code is written in a more informal style, then the comments should be informal.  
+**Comments should be up-to-date.** If you make changes to the code, then you should also update the comments to reflect those changes.
+
+In additional, consider the following practices in writing your code:
+
+**Using a consistent comment style.** This will make it easier for other people to read and understand your code.  
+**Using meaningful names for variables and functions.** This will help to reduce the need for comments.  
+**Use indentation and whitespace to make your code easier to read.** This will also help to reduce the need for comments.  
+**Document your code.** This means writing a separate document that explains the purpose of the code, how to use it, and any known limitations.
+
+By following these best practices, you can write code that is easy to understand and maintain. This will make your code more reusable and will help to prevent errors.
+
+Now back to our code. Let's break this code down. We are reading from a .csv file and assigning the results into an object called `stent_study`. The assignment arrow `<-` means we assign what is on the right to what is on the left. The `R` function we use in this case is `read_csv()`. When using `R` functions, you should ask yourself:  
 
 1. What do I want `R` to do? 
 

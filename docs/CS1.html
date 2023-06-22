@@ -202,8 +202,14 @@ a package can be used, it must be installed on the computer (once per computer o
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/ProjectMOSAIC/mosaic">mosaic</a></span><span class="op">)</span></span></code></pre></div>
 <p>Next read in the data into the working environment.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">stent_study</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"data/stent_study.csv"</span><span class="op">)</span></span></code></pre></div>
-<p>Let’s break this code down. We are reading from a .csv file and assigning the results into an object called <code>stent_study</code>. The assignment arrow <code>&lt;-</code> means we assign what is on the right to what is on the left. The <code>R</code> function we use in this case is <code><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv()</a></code>. When using <code>R</code> functions, you should ask yourself:</p>
+<code class="sourceCode R"><span><span class="co"># This code reads the `stent_study.csv` file into the `stent_study` object.</span></span>
+<span><span class="va">stent_study</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"data/stent_study.csv"</span><span class="op">)</span></span></code></pre></div>
+<p>Note on commenting code: It is good practice to comment code. Here are some of the best practices for commenting computer code:</p>
+<p><strong>Comments should explain why code is written the way it is, rather than explaining what the code does.</strong> This means that you should explain the intent of the code, not just the steps that it takes to achieve that intent.<br><strong>Comments should be brief and to the point.</strong> There is no need to write long, rambling comments. Just write enough to explain what the code is doing and why.<br><strong>Comments should be clear and concise.</strong> Use plain language that is easy to understand. Avoid jargon and technical terms that the reader may not be familiar with.<br><strong>Comments should be consistent with the style of the code.</strong> If the code is written in a formal style, then the comments should also be formal. If the code is written in a more informal style, then the comments should be informal.<br><strong>Comments should be up-to-date.</strong> If you make changes to the code, then you should also update the comments to reflect those changes.</p>
+<p>In additional, consider the following practices in writing your code:</p>
+<p><strong>Using a consistent comment style.</strong> This will make it easier for other people to read and understand your code.<br><strong>Using meaningful names for variables and functions.</strong> This will help to reduce the need for comments.<br><strong>Use indentation and whitespace to make your code easier to read.</strong> This will also help to reduce the need for comments.<br><strong>Document your code.</strong> This means writing a separate document that explains the purpose of the code, how to use it, and any known limitations.</p>
+<p>By following these best practices, you can write code that is easy to understand and maintain. This will make your code more reusable and will help to prevent errors.</p>
+<p>Now back to our code. Let’s break this code down. We are reading from a .csv file and assigning the results into an object called <code>stent_study</code>. The assignment arrow <code>&lt;-</code> means we assign what is on the right to what is on the left. The <code>R</code> function we use in this case is <code><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv()</a></code>. When using <code>R</code> functions, you should ask yourself:</p>
 <ol style="list-style-type: decimal">
 <li><p>What do I want <code>R</code> to do?</p></li>
 <li><p>What information must I provide for <code>R</code> to do this?</p></li>
@@ -452,7 +458,7 @@ Figure 1.3: Better graph.
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Computational Probability and Statistics</strong>" was written by Matthew Davis, Brianna Hitt, Ken Horton, Kris Pruitt, Bradley Warner. It was last built on 2023-06-05.</p>
+    <p>"<strong>Computational Probability and Statistics</strong>" was written by Matthew Davis, Brianna Hitt, Ken Horton, Kris Pruitt, Bradley Warner. It was last built on 2023-06-22.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
