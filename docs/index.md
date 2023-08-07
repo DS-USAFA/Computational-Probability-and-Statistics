@@ -6,7 +6,7 @@ author:
 - Ken Horton
 - Kris Pruitt
 - Bradley Warner
-date: "2023-06-22"
+date: "2023-08-07"
 header-includes:
    - \usepackage{multirow}
    - \usepackage{multicol}
@@ -88,8 +88,8 @@ This book is licensed under the [Creative Commons Attribution-NonCommercial-Shar
 
 ## File Creation Information 
 
-  * File creation date: 2023-06-22
-  * R version 4.3.0 (2023-04-21)
+  * File creation date: 2023-08-07
+  * R version 4.3.1 (2023-06-16)
 
 
 
